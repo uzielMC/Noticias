@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="gijgo.min.css">
+    <style type="text/css"> 
+        .contenedor{ 
+            height: 200px;
+            width: 600px;
+            margin-left: 60px;
+        } 
+    </style> 
+
+    <title>Noticias</title>
+  </head>
+  <body>
+   <div class="contenedor">
+        <form action="cargar.php" method="POST" enctype ="multipart/form-data">
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Autor</label>
+                     <input type="text" class="form-control" name="Autor" placeholder="Primer nombre Primer apellido">
+                    <label for="formGroupExampleInput">Título</label>
+                     <input type="text" class="form-control" name="titulo" placeholder="Título de la noticia">
+                    <label for="exampleFormControlTextarea1">Texto Noticia</label>   
+                    <textarea class="form-control" name="Noti_text" rows="6"></textarea>
+					<!--<button type="button" class="btn btn-primary">Subir Texto</button>-->
+                    <br>
+					<label for="exampleFormControlTextarea1">Categoria de la noticia</label>   
+					<div class="input-group mb-3">
+					<select class="custom-select" name="Categoria" id="inputGroupSelect01">
+						<option selected value ="Deportes">Deportes</option>
+						<option value="Politica">Politica</option>
+						<option value="Cultura">Cultura</option>
+						<option value="Otro">Otro</option>
+					</select>
+					</div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" name="archivo" lang="es">
+                        <label class="custom-file-label" for="customFileLang">Imagen</label>
+					<!--<button type="button" class="btn btn-primary">Subir Imagen</button>-->
+                    </div>
+					<p><input type="submit"/></p>
+                    <br>
+                </div>
+        </form>
+    </div>
+    <script>
+         $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+    </script>
+    <script src="gijgo.min.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
